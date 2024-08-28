@@ -1,0 +1,21 @@
+<script>
+    //entrada
+    let nota1 = parseFloat(prompt("nota 1"))
+    let nota2 = parseFloat(prompt("nota 2"))
+
+    //processamento
+    function calcularMedia(nota1=0, nota2=0){
+        return media = (nota1 + nota2) / 2
+    }
+    function verificarResultado(media){
+        let resposta = ""
+        if (media > 6){
+            resposta = "aprovado"
+        }
+    }
+    let media = calcularMedia(nota, nota2)
+    let resultado = verificarResultado(media)
+    //saida
+    document.write("resposta: ", media)
+    document.write("Resposta: ", resultado)
+</script>
