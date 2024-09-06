@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script>
+    //entrada
+
+    //processamento
+    function contamultiplos(limite = 100, multiplo = 10){
+        let resposta = ''
+        for (let numero = 1; numero <= limite; numero++){
+            if (numero % multiplo == 0) {
+                resposta += `${numero} multiplo de ${multiplo} <br>`
+            } else {
+                resposta += `${numero} <br>`
+            }
+        }
+        return resposta
+    }
+
+    //saida
+    document.write(contamultiplos(50, 5))
+</script>

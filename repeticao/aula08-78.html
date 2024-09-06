@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<script>
+    //entrada
+    let maiorAltura = 0
+    let menorAltura = 0 
+    let somaAlturaMulheres = 0
+    let num_mulheres = 0
+    let num_homens = 0
+
+    //processamento
+    for (let i =  0; i < 2; i++){
+        let altura =  ''
+        parseFloat(prompt(`digite a altura da ${i + 1}ª pessoa (em metros):`))
+        let sexo = prompt("digite o sexo da pessoa (M para masculino e F para feminino): ")
+        if (i === 0 ){
+            maiorAltura = altura
+            menorAltura = altura
+        }
+        if (altura > maiorAltura){
+            maiorAltura = altura
+        }
+        if (altura < menorAltura){
+            menorAltura = altura
+        }
+        if (sexo === 'F' || sexo === 'f'){
+            somaAlturaMulheres += altura
+            num_mulheres++
+        } else if (sexo === 'M'|| sexo === 'm'){
+            num_homens++
+        }
+    }
+    let mediaAlturaMulheres = 
+    num_mulheres > 0 ?
+    somaAlturaMulheres / num_mulheres :
+    0
+
+    //saida
+    document.write(`A maior altura do grupo é: ${maiorAltura} <br>`)
+    document.write(`A menor altura do grupo é: ${menorAltura} <br>`)
+    document.write(`A média de altura das mulheres é: ${mediaAlturaMulheres} <br>`)
+    document.write(`O numeros de homens é: ${num_homens}<br>`)
+</script>
